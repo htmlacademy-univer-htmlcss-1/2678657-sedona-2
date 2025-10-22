@@ -48,6 +48,22 @@ body {
     color: white;
     background-color: #756157;
     border-radius: 4px;
+    border:none;
+}
+
+.button.btn-accept-filters {
+    color: white;
+    background-color: rgba(130, 179, 211, 1);
+}
+
+.button.btn-reset-filters {
+    color: white;
+    background-color: transparent;
+    border: none;
+}
+
+.button.link-detailed-item {
+    text-decoration: none;
 }
 
 
@@ -58,6 +74,10 @@ body {
     text-transform: uppercase;
     color: black;
     text-align: center;
+}
+
+.heading-2.search-results {
+    text-align: start;
 }
 
 .heading-2.newsletter-heading {
@@ -108,6 +128,17 @@ body {
 .heading-3-description.with-photo{
     color: white;
 }
+
+.heading-3.item-name {
+    text-align: start;
+}
+.heading-3-description.item-type {
+    text-align: start;
+}
+.heading-3-description.item-price {
+    text-align: end;
+}
+
 
 
 .advantages-item:nth-child(odd) {
@@ -161,4 +192,58 @@ body {
     font-weight: 400;
     font-size: 18px;
     color: black;
+}
+
+.hostels {
+    line-height: 78px;  
+    font-weight: 700;
+    font-size: 60px;
+    color: white;
+}
+
+.filters {
+    background: url("../images/background-images/filters-background.jpg") no-repeat center;
+    background-size: cover;
+    background-color: green;
+}
+
+.select-options {
+    width: 292px;
+    height: 49px;
+    border-radius: 4px;
+    border: 2px solid rgba(229, 229, 229, 1);
+}
+
+.rating-number {
+    line-height: 20px;  
+    font-weight: 400;
+    font-size: 16px;
+    color: rgba(51, 51, 51, 1);
+    background-color: rgba(242, 242, 242, 1);
+    width: 140px;
+    height: 37px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hotel-item-description {
+    width: 300px;
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
+}
+
+.pagination-item-link {
+    background-color: rgba(130, 179, 211, 1);
+    color: rgba(255, 255, 255, 1);
+    text-decoration: none;
+}
+.pagination-item-link.select {
+    background-color: rgba(242, 242, 242, 1);
+    color: rgba(0, 0, 0, 1);
+}
+.pagination-item-link.dots {
+    background-color: white;
+    color: rgba(0, 0, 0, 1);
 }
