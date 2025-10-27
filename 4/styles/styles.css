@@ -222,6 +222,20 @@ body {
     font-style: normal; 
 }
 
+.number:hover {
+    color: rgba(117, 97, 87, 1);
+    text-decoration: none;
+}
+
+.number:active {
+    color: rgba(117, 97, 87, 0.3);
+    text-decoration: none;
+}
+
+.number:focus {
+    color: rgba(117, 97, 87, 1);
+}
+
 .email {
     line-height: 24px;  
     font-weight: 400;
@@ -280,3 +294,32 @@ body {
     text-align: center;
 }
 
+
+.visibility-hidden {
+    visibility: hidden;
+}
+
+.comfort-item:nth-child(odd) {
+    background-color: rgba(131, 179, 211, 0.12);
+}
+
+.comfort-item:nth-child(even) {
+    background-color: white;
+}
+
+.html-academy-link {
+    color: rgba(0, 0, 0, 1);
+    text-decoration: none;
+}
+
+.html-academy-link:hover {
+    color: rgba(117, 97, 87, 1);
+}
+
+.html-academy-link:active {
+    color: rgba(117, 97, 87, 0.3);
+}
+
+.html-academy-link:focus {
+    color: rgba(117, 97, 87, 1);
+}
