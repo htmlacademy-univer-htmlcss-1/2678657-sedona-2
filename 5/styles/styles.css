@@ -19,24 +19,20 @@ body {
     font-size: 16px;
     line-height: 24px;
     color: #242424;
-    background-color: lightgray;
+    background-color: rgba(242, 242, 242, 1);
 }
-
-
 
 .header {
     background-color: white;
     color: black;
     display: flex;
     align-items: center;
-    max-width: 1200px; 
-    height: 64px;
-    margin: 0 auto;
+    width: 1200px;
+    margin: auto;
 }
 
 .link-home-page {
-    margin-right: 30px;
-    padding-left: 70px  ;
+    margin-left: 70px;
 }
 
 .navigation {
@@ -70,7 +66,7 @@ body {
 .navigation-link {
     line-height: 24px;
     font-weight: 700;
-    font-size: 20px;
+        
     color: black;
     text-decoration: none;
 }
@@ -153,13 +149,11 @@ body {
 
 .separate-inscription {
     background-color: white;
-    display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.separate-inscription.sedona {
+/* .separate-inscription.sedona {
     height: 261px;
 }
 
@@ -169,7 +163,7 @@ body {
 
 .separate-inscription.bid {
     height: 406px;
-}
+}  */
 .heading-2 {
     line-height: 36px;  
     font-weight: 700;
@@ -200,7 +194,6 @@ body {
     background-size: cover;
     text-align: center;
     background-color: #756157;
-    height: 485px;
 }
 
 .welcome-section img {
@@ -219,7 +212,6 @@ body {
 
 .advantages-list {
     width: 1200px;
-    height: 1155px;
     display: flex;
     list-style: none;
     flex-wrap: wrap;
@@ -229,7 +221,6 @@ body {
 
 .advantages-item {
     width: 400px;
-    height: 385px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -241,7 +232,9 @@ body {
 }
 
 .advantages-item.with-photo .text-content {
-    flex: 1;
+    width: 230px;
+    margin-right: 85px;
+    margin-left: 85px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -249,7 +242,6 @@ body {
 
 .advantages-item.with-photo img {
     width: 800px;
-    height: 385px;
 }
 
 .advantages-item.with-photo .heading-3 {
@@ -286,7 +278,7 @@ body {
 }
 
 .advantages-item:nth-child(even) {
-    background-color: white;
+    background-color: rgba(131, 179, 211, 0.12);
 }
 
 .advantages-item:first-child {
@@ -303,7 +295,6 @@ body {
 
 .comfort-list {
     width: 1200px;
-    height: 385px;
     display: flex;
     list-style: none;   
     flex-wrap: wrap;
@@ -313,7 +304,6 @@ body {
 
 .comfort-item {
     width: 400px;
-    height: 385px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -323,9 +313,6 @@ body {
     background: url("../images/background-images/newsletter-image.jpg") no-repeat center;
     background-size: cover;
     text-align: center;
-    height: 415px;
-    display: flex;
-    flex-direction: column;
     justify-content: center;
     
 }
@@ -370,7 +357,6 @@ body {
     font-size: 18px;
     color: black;
     width: 452px;
-    height: 52px;
     border: none;
     border-radius: 4px 0 0 4px;
     padding: 0 20px;
@@ -379,7 +365,6 @@ body {
 
 .button.button-additional.email-btn {
     width: 232px;
-    height: 52px;
     margin-left: 0;
     padding: 0;
     border-radius: 0 4px 4px 0;
@@ -436,7 +421,6 @@ body {
 
 .button.button-big.btn-found-hotels {
     width: 376px;
-    height: 52px;
 }
 
 
@@ -473,9 +457,8 @@ body {
     background-color: white;
     display: flex;
     align-items: center;
-    max-width: 1060px;
-    margin: auto;
-    height: 120px;
+    width: 1060px;
+    margin: 0 auto;
     padding: 0 70px;
 }
 
@@ -493,7 +476,6 @@ body {
 }
 
 .filters {
-    height: 412px;
     padding: 35px 70px 70px 70px;
 }
 
@@ -505,7 +487,6 @@ body {
 
 .btn-filters {
     width: 191px;
-    height: 104px;
 }
 
 .main-content-on-page {
@@ -521,25 +502,21 @@ body {
 
 .search-results {
     width: 338px;
-    height: 36px;
 }
 
 .filter-and-view{
     width: 522px;
-    height: 49px;
     display: flex;
     align-items: center;
 }
 
 .select-options {
     width: 292px;
-    height: 49px;
     
 }
 
 .view-type-list{
     width: 160px;
-    height: 48px;
     list-style: none;
     display: flex;
     gap: 10px;
@@ -547,7 +524,6 @@ body {
 
 .view-button {
     width: 48px;
-    height: 48px;
     border: none;
     background: transparent;
     border-radius: 4px;
@@ -567,32 +543,28 @@ body {
 .hotels-list {
     display: flex;
     flex-wrap: wrap;
-    gap: 15px;
     list-style: none;
     padding: 0 70px;
+    gap:20px;
 }
 
 .hotels-item {
     border: 1px solid #E6E6E6;
     border-radius: 4px;
     width: 340px;
-    height: 438px;
     background: white;
 }
 
 .hotels-item img {
     width: 300px;
-    height: 212px;
 }
 
 .hotels-item p {
     width: 300px;
-    height: 28px;
 }
 
 .hotel-item-description{
     width: 300px;
-    height: 21px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -600,7 +572,6 @@ body {
 
 .hotel-item-description-btns{
     width: 300px;
-    height: 36px;
     display: flex;
     justify-content: space-between;
 }
@@ -632,7 +603,6 @@ body {
 
 .pagination-item {
     width: 60px;
-    height: 60px;
     background-color: rgba(130, 179, 211, 1);
     border-radius: 4px;
     text-align: center;
