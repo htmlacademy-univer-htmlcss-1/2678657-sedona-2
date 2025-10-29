@@ -24,19 +24,21 @@
           </li>
         </ul> 
       </nav>
-      <ul>
-        <li>
-          <button class="button btn-search">
-            <img src="images/search.svg" width="20" height="20" alt="применить">
-          </button>
-        </li>  
-        <li>
-          <a class="link-favorite-page" href="#">
-            <img src="images/heart.svg" width="20" height="20" alt="Избранное">
-          </a>
-        </li>
-        <li><button class="button">Хочу сюда!</button></li>
-      </ul>
+      <div class="right-side-header">
+        <ul class="header-actions">
+          <li>
+            <button class="button btn-search">
+              <img src="images/search.svg" width="20" height="20" alt="Поиск">
+            </button>
+          </li>  
+          <li>
+            <a class="link-favorite-page" href="#">
+              <img src="images/heart.svg" width="20" height="20" alt="Избранное">
+            </a>
+          </li>
+          <li><button class="button btn-modal-window">Хочу сюда!</button></li>
+        </ul>
+      </div>
     </header>
     <main class="catalog-page">
         <section class="filters">
@@ -95,31 +97,35 @@
                         <input type="number" name="price-max" id="maxValue" value="9000" min="1" max="10000000"> до
                      </div>
                 </fieldset>
-                <button type="submit" class="button button-additional">приминить</button>
-                <button type="reset"  class="button button-reset">сбросить</button>
+                <div class="btn-filters">
+                    <button type="submit" class="button button-additional">приминить</button>
+                    <button type="reset"  class="button button-reset">сбросить</button>
+                </div>
             </form>
         </section>
         <section class="main-content-on-page">
             <header class="header-of-main-content">
                 <h2 class="visibility-hidden">Список гостиниц</h2>
                 <p class="heading-2 search-results">Найдено гостиниц: 38</p>
-                <select class="select-options">
-                    <option value="new">Сначала новые</option>
-                    <option value="cheap" selected>Сначала дешёвое</option>
-                    <option value="expensive">Сначала дорогое</option>
-                    <option value="popular">Сначала популярное</option>
-                </select>
-                <ul class="view-type-list">
-                    <li class="view-type-item">
-                        <span class="icon-first-view"></span>
-                    </li>
-                    <li class="view-type-item">
-                        <span class="icon-second-view"></span>
-                    </li>
-                    <li class="view-type-item">
-                        <span class="icon-third-view"></span>
-                    </li>
-                </ul>
+                <div class="filter-and-view">
+                    <select class="select-options">
+                        <option value="new">Сначала новые</option>
+                        <option value="cheap" selected>Сначала дешёвое</option>
+                        <option value="expensive">Сначала дорогое</option>
+                        <option value="popular">Сначала популярное</option>
+                    </select>
+                    <ul class="view-type-list">
+                        <li class="view-type-item">
+                            <button class="view-button active">
+                        </li>
+                        <li class="view-type-item">
+                            <button class="view-button">
+                        </li>
+                        <li class="view-type-item">
+                            <button class="view-button">
+                        </li>
+                    </ul>
+                </div>
             </header>
             <ul class="hotels-list">
                 <li class="hotels-item">
@@ -129,7 +135,7 @@
                         <p class="heading-3-description item-type">Гостиница</p>
                         <p class="heading-3-description item-price">От 4000 ₽</p>
                     </div>
-                    <div class="hotel-item-description">
+                    <div class="hotel-item-description-btns">
                         <a href="#" class="button">подробнее</a>
                         <button class="button button-additional">в избранное</button>
                     </div>
@@ -158,7 +164,7 @@
                         <p class="heading-3-description item-type">Гостиница</p>
                         <p class="heading-3-description item-price">От 5000 ₽</p>
                     </div>
-                    <div class="hotel-item-description">
+                    <div class="hotel-item-description-btns">
                         <a href="#" class="button ">подробнее</a>
                         <button class="button button-selected">в избранном</button>
                     </div>
@@ -187,7 +193,7 @@
                         <p class="heading-3-description item-type">Гостиница</p>
                         <p class="heading-3-description item-price">От 2500 ₽</p>
                     </div>
-                    <div class="hotel-item-description">
+                    <div class="hotel-item-description-btns">
                         <a href="#" class="button">подробнее</a>
                         <button class="button button-additional">в избранное</button>
                     </div>
@@ -213,7 +219,7 @@
                         <p class="heading-3-description item-type">Гостиница</p>
                         <p class="heading-3-description item-price">От 1500 ₽</p>
                     </div>
-                    <div class="hotel-item-description">
+                    <div class="hotel-item-description-btns">
                         <a href="#" class="button">подробнее</a>
                         <button class="button button-additional">в избранное</button>
                     </div>
@@ -232,8 +238,8 @@
             </ul>
             <nav class="pagination">
                 <ul class="pagination-list">
-                    <li class="pagination-item">
-                        <a href="#" class="pagination-item-link select">1</a>
+                    <li class="pagination-item select">
+                        <a href="#" class="pagination-item-link">1</a>
                     </li>
                     <li class="pagination-item">
                         <a href="#" class="pagination-item-link">2</a>
@@ -244,8 +250,8 @@
                     <li class="pagination-item">
                         <a href="#" class="pagination-item-link">4</a>
                     </li>
-                    <li class="pagination-item">
-                        <a href="#" class="pagination-item-link dots">...</a>
+                    <li class="pagination-item dots">
+                        <a href="#" class="pagination-item-link">...</a>
                     </li>
                     <li class="pagination-item">
                         <a href="#" class="pagination-item-link">10</a>
