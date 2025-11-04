@@ -121,6 +121,7 @@ body {
 
 .button-selected {
     background-color: #7DB54F;
+    padding: 8px 18px !important;
 }
 
 .button-big {
@@ -488,16 +489,6 @@ body {
     border: 2px solid rgba(229, 229, 229, 1);
 }
 
-.rating-number {
-    line-height: 20px;  
-    font-weight: 400;
-    font-size: 16px;
-    color: rgba(51, 51, 51, 1);
-    background-color: rgba(242, 242, 242, 1);
-}
-
-
-
 .pagination-item-link {
     color: rgba(255, 255, 255, 1);
     text-decoration: none;
@@ -659,51 +650,83 @@ body {
 
 
 .hotels-list {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(3, 340px);
     list-style: none;
     padding: 0 70px;
-    gap:20px;
+    gap: 20px;
+    margin: 0 auto;
+    justify-content: center;
+    width: 1060px;
 }
 
 .hotels-item {
-    border-radius: 4px;
-    width: 340px;
-    background: white;
+    display: grid;
+    grid-template-columns: repeat(2, 140px);
+    grid-template-rows: 212px 1fr;
+    gap: 16px 20px;
+    padding: 19px;
+    border: 1px solid #e6e6e6;
+    grid-template-areas:
+        "img img"
+        "name name"
+        "type price"
+        "details favorite"
+        "rating-starts rating-number";
 }
 
 .hotels-item img {
-    width: 300px;
+    grid-area: img;
+    object-fit: contain;
 }
 
-.hotels-item p {
-    width: 300px;
+.item-name {
+    grid-area: name;
 }
 
-.hotel-item-description{
-    width: 300px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.item-type {
+    grid-area: type;
 }
 
-.hotel-item-description-btns{
-    width: 300px;
-    display: flex;
-    justify-content: space-between;
+.item-price {
+    grid-area: price;
+    text-align: right;
+}
+
+.details {
+    grid-area: details;
+    align-self: center;
+    padding: 8px 26px ;
+}
+
+.favorite {
+    grid-area: favorite;
+    align-self: center;
+    padding: 8px 20px;
 }
 
 .rating-starts {
+    grid-area: rating-starts;
     display: flex;
-    flex-direction: row;
     list-style: none;
+    padding: 0;
+    gap:6px;
     align-items: center;
-    gap: 6px;
 }
 
-.rating-area {
-    display: flex;
-    justify-content: space-between;
+.rating-number {
+    grid-area: rating-number;
+    text-align: center;
+    margin: 0;
+    font-size: 16px;
+    line-height: 20px;
+    text-transform: uppercase;
+    background-color: rgba(242, 242, 242, 1);
+    padding: 9px 22px 8px 23px;
+}
+
+.icon-star {
+    color: rgba(131, 179, 211, 1);
 }
 
 .pagination {
