@@ -48,10 +48,18 @@ body {
 
 .header-conteiner {
     display: flex;
-    justify-content: space-between;
     align-items: flex-start;
     width: 1060px;
+    justify-content: space-between;
+    gap: 0px;
 }
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 0;
+}
+
 
 .link-home-page {
     height: 64px;
@@ -74,7 +82,6 @@ body {
     list-style: none;
     margin: 0;
     padding: 0;
-    gap: 34px;
 }
 
 
@@ -85,7 +92,6 @@ body {
     padding: 0;
     align-items: center;
     width: 268px;
-    
 }
 
 .link-favorite-page {
@@ -518,6 +524,7 @@ body {
     padding: 14px 20px;
     margin: 0;
     background-color: rgba(242, 242, 242, 1);
+    font-family: "PT Sans", sans-serif;
 }
 
 .button.button-additional.email-btn {
@@ -558,24 +565,40 @@ body {
 }
 
 .select-options {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
     border-radius: 4px;
     border: 2px solid rgba(229, 229, 229, 1);
-    padding: 12px 20px;
+    padding: 12px 40px 12px 20px; 
     width: 292px;
-    height: 49px;
+
+    font-family: "PT Sans", sans-serif;
+    font-weight: 400;
     font-size: 18px;
-    line-height: 21px; 
+    line-height: 21px;
+    color: rgba(51, 51, 51, 1);
+
+    background-color: #fff;
+    background-image: url("../images/icons/arrow-down.svg"); 
+    background-repeat: no-repeat;
+    background-position: right 16px center;
+    background-size: 16px 16px;
+
+    cursor: pointer;
 }
 
-.select-options:hover {
-    border: 2px solid rgba(104, 162, 202, 1);
-}
+.select-options:hover,
 .select-options:focus {
-    border: 2px solid rgba(104, 162, 202, 1);
+    border-color: rgba(104, 162, 202, 1);
+    outline: none;
 }
+
 .select-options:disabled {
     border: 2px solid rgba(0, 0, 0, 0.3);
     color: rgba(0, 0, 0, 0.3);
+    background-image: none;
 }
 
 .pagination-item-link {
