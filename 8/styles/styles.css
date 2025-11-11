@@ -24,7 +24,6 @@ body {
     line-height: 24px;
     color: #242424;
     background-color: rgba(242, 242, 242, 1);
-
     min-height: 100%;
     margin: 0;
 }
@@ -37,6 +36,7 @@ body {
     flex-direction: column;
     justify-content: space-between;
     background-color: white;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
 
@@ -512,10 +512,10 @@ body {
     font-weight: 400;
     font-size: 18px;
     color: black;
-    width: 452px;
+    width: 412px;
     border: none;
     border-radius: 4px 0 0 4px;
-    padding: 0;
+    padding: 14px 20px;
     margin: 0;
     background-color: rgba(242, 242, 242, 1);
 }
@@ -523,11 +523,11 @@ body {
 .button.button-additional.email-btn {
     width: 232px;
     margin-left: 0;
-    padding: 0;
     border-radius: 0 4px 4px 0;
     border: none;
     line-height: 36px;  
     padding: 8px 50px;
+    font-size: 20px;
 }
 
 .newsletter form {
@@ -560,6 +560,22 @@ body {
 .select-options {
     border-radius: 4px;
     border: 2px solid rgba(229, 229, 229, 1);
+    padding: 12px 20px;
+    width: 292px;
+    height: 49px;
+    font-size: 18px;
+    line-height: 21px; 
+}
+
+.select-options:hover {
+    border: 2px solid rgba(104, 162, 202, 1);
+}
+.select-options:focus {
+    border: 2px solid rgba(104, 162, 202, 1);
+}
+.select-options:disabled {
+    border: 2px solid rgba(0, 0, 0, 0.3);
+    color: rgba(0, 0, 0, 0.3);
 }
 
 .pagination-item-link {
@@ -687,10 +703,7 @@ body {
     gap:74px;
 }
 
-.select-options {
-    width: 292px;
-    
-}
+
 
 .view-type-list{
     width: 160px;
@@ -1049,4 +1062,18 @@ body {
 
 .link-to-catalog-page:active {
     color: rgba(255, 255, 255, 0.3);
+}
+
+.navigation-link.active {
+    position: relative;
+}
+
+.navigation-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0px;
+    left: 16px;
+    right: 16px;
+    height: 2px;
+    background-color: rgba(117, 98, 87, 1);
 }
