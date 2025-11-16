@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Поиск гостиницы</title>
+  <link rel="stylesheet" href="styles/styles.css">
+  <base href="https://htmlacademy-univer-htmlcss-1.github.io/2678657-sedona-2/9/">
+</head>
+
+<body class="modal-body">
+  <div class="modal-backdrop">
+    <iframe src="index.html" class="modal-iframe"></iframe>
+  </div>
+  <div class="modal-search">
+    <header class="modal-header">
+        <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
+        <a href="index.html" class="modal-close">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M14 1.29231L12.7077 0L7 5.70769L1.29231 0L0 1.29231L5.70769 7L0 12.7077L1.29231 14L7 8.29231L12.7077 14L14 12.7077L8.29231 7L14 1.29231Z"/>
+            </svg>           
+        </a>
+    </header>
+    <form class="modal-form" action="https://echo.htmlacademy.ru/" method="post">
+      <div class="modal-row check-in">
+        <label class="modal-label">Дата Заезда:</label>
+        <input class="modal-input" name="check-in-day" type="date">
+        <p class="error-message">Мы не можем отправить вас в прошлое.</p>
+      </div>
+      <div class="modal-row check-out">
+        <label class="modal-label">Дата Выезда:</label>
+        <input class="modal-input" name="check-out-day" type="date">
+        <p class="success-message">На эти даты есть свободные номера. Пока есть.</p>
+      </div>
+      <div class="passengers-conteiner">
+        <div class="people-conteiner-adults">
+            <label class="modal-label">Взрослые:</label>
+            <div class="counter">
+                <button type="button" class="counter-button minus">
+                        <div class="icon-container">
+                            <svg width="14" height="2" viewBox="0 0 14 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0 0L0 2L14 2V0L0 0Z"/>
+                            </svg>
+                        </div>
+                </button>
+                <input name="count-adults" class="modal-input-small" value="2">
+                <button type="button" class="counter-button plus">
+                    <div class="icon-container">
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M14 6H8V0H6V6H0V8H6V14H8V8H14V6Z"/>
+                        </svg>
+                    </div>
+                </button>
+            </div>
+        </div>
+        <div class="people-conteiner-kids">
+            <div class="kids-label">
+                <label class="modal-label">Дети:</label>
+                <span class="tooltip">
+                    <button class="tooltip-btn" type="button" aria-labelledby="tooltip-label-text">
+                        <svg width="2" height="12" viewBox="0 0 2 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H2V2H0V0ZM2 12H0V3H2V12Z" fill="white"/>
+                        </svg>
+                    </button>
+                    <span class="tooltip-text" role="tooltip-label-text">
+                        Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.
+                    </span>
+                </span>
+            </div>
+            <div class="counter">
+                <button type="button" class="counter-button minus">
+                    <div class="icon-container">
+                            <svg width="14" height="2" viewBox="0 0 14 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0 0L0 2L14 2V0L0 0Z"/>
+                            </svg>
+                        </div>
+                </button>
+                <input name="count-kids" class="modal-input-small" value="2">
+                <button type="button" class="counter-button plus">
+                    <div class="icon-container">
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M14 6H8V0H6V6H0V8H6V14H8V8H14V6Z"/>
+                        </svg>
+                    </div>
+                </button>
+            </div>
+        </div>
+      </div>
+      <button class="modal-button" type="submit">Найти</button>
+    </form>
+  </div>
+</body>
+</html>
