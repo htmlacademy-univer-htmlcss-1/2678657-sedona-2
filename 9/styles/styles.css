@@ -554,7 +554,7 @@ body {
 .filters {
     background: url("../images/background-images/filters-background.jpg") no-repeat center;
     background-size: cover;
-    background-color: green;
+    background-color: gray;
     display: flex;
     flex-direction: column;
     gap:40px;
@@ -1170,6 +1170,7 @@ body {
 .slider-conteiner {
     background-color: rgba(255, 255, 255, 0.3);
     height: 4px;
+    position: relative;
 }
 
 
@@ -1177,6 +1178,15 @@ body {
     background-color: rgba(255, 255, 255, 1);
     height: 4px;
     width: 226px;
+    position: relative;
+}
+
+.slider-track {
+    position: absolute;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 1);
+    left: 0;
+    width: 122px;
 }
 
 .button-slider {
@@ -1184,7 +1194,10 @@ body {
     height: 20px;
     border-radius: 5px;
     border: 0;
-    position: relative;
+    background-color: #ffffff;
+    position: absolute;
+    transform: translateY(-50%);
+    cursor: pointer;
 }
 
 
@@ -1415,7 +1428,7 @@ body {
 .modal-input {
     width: 398px;
     height: 24px;
-    padding: 12px 17px 12px 20px;
+    padding: 12px 20px 12px 20px;
     font-size: 18px;
     line-height: 24px;
     border-radius: 4px;
@@ -1423,6 +1436,29 @@ body {
     border:none;
     background-color: rgba(242, 242, 242, 1);
     list-style:none;
+    position: relative;
+}
+
+.modal-input::after {
+    content: "";
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 16px;
+    height: 15px;
+    background-image: url("../images/icons/Calendar.svg");
+    background-repeat: no-repeat;
+    opacity: 0.3;
+}
+
+.modal-input::-webkit-calendar-picker-indicator {
+    opacity: 0;
+    width: 40px; 
+    height: 40px;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
 }
 
 .modal-button {
@@ -1477,21 +1513,22 @@ body {
     gap: 88px;
 }
 
+
 .people-conteiner-adults {
     width: 247px;
     display: flex;
-    gap: 46px;
+    gap: 35px;
     align-items: center;
 }
 
 .people-conteiner-kids {
     width: 242px;
     display: flex;
-    gap: 46px;
+    gap: 35px;
 }
 
 .modal-input-small {
-    width: 11px;
+    width: 22px;
     padding: 14px 10px;
     background-color: rgba(242, 242, 242, 1);
     align-items: center;
@@ -1501,7 +1538,14 @@ body {
     font-family: "PT Sans", sans-serif;
     font-size: 18px;
     line-height: 20px;
-    font-weight: 700;  
+    font-weight: 700;
+    text-align: center;  
+}
+
+.modal-input-small::-webkit-outer-spin-button,
+.modal-input-small::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }
 
 .modal-input-small:focus-visible {
@@ -1511,7 +1555,6 @@ body {
 .counter {
     display: flex;
     align-items: center;
-    width: 110px;
 }
 
 .tooltip {
@@ -1558,6 +1601,7 @@ body {
     transform: translateX(-50%);
     border-width: 10px;
     border-style: solid;
+    border-color: transparent transparent rgba(51, 51, 51, 1) transparent ;
 }
 
 
