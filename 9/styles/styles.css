@@ -1177,16 +1177,7 @@ body {
 .slider-white {
     background-color: rgba(255, 255, 255, 1);
     height: 4px;
-    width: 226px;
     position: relative;
-}
-
-.slider-track {
-    position: absolute;
-    height: 100%;
-    background-color: rgba(255, 255, 255, 1);
-    left: 0;
-    width: 122px;
 }
 
 .button-slider {
@@ -1198,6 +1189,13 @@ body {
     position: absolute;
     transform: translateY(-50%);
     cursor: pointer;
+}
+
+.button-slider.left {
+    left: 0;
+}
+.button-slider.right {
+    right: 0;
 }
 
 
@@ -1510,6 +1508,7 @@ body {
 
 .passengers-conteiner {
     display: flex;
+    justify-content: space-between;
     gap: 88px;
 }
 
@@ -1517,19 +1516,21 @@ body {
 .people-conteiner-adults {
     width: 247px;
     display: flex;
-    gap: 35px;
+    gap: 46px;
+    justify-content: space-between;
     align-items: center;
 }
 
 .people-conteiner-kids {
     width: 242px;
     display: flex;
-    gap: 35px;
+    justify-content: space-between;
+    gap: 46px;
 }
 
 .modal-input-small {
-    width: 22px;
-    padding: 14px 10px;
+    width: 31px;
+    padding: 14px 0;
     background-color: rgba(242, 242, 242, 1);
     align-items: center;
     line-height: 20px;
