@@ -1173,11 +1173,10 @@ body {
     position: relative;
 }
 
-
 .slider-white {
     background-color: rgba(255, 255, 255, 1);
     height: 4px;
-    position: relative;
+    position: absolute;
 }
 
 .button-slider {
@@ -1187,13 +1186,14 @@ body {
     border: 0;
     background-color: #ffffff;
     position: absolute;
-    transform: translateY(-50%);
+    top: -8px;
     cursor: pointer;
 }
 
 .button-slider.left {
     left: 0;
 }
+
 .button-slider.right {
     right: 0;
 }
